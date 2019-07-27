@@ -21,11 +21,6 @@ int _printf(char *format, ...)
 	{
 		if (format[0] == '%')
 		{
-			/*
-			 * fn_p = getfn(fmt[1])
-			 * if (fn_p !== NULL)
-			 * fn_p()
-			 */
 			for (i = 0; getfn[i].specifier; i++)
 			{
 				if (format[1] == getfn[i].specifier[1])
