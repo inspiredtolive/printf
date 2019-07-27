@@ -37,19 +37,27 @@ Our code will be compiled using:
 $ gcc -Wall -Werror -Wextra -pedantic *.c
 
 ### [0. I'm not going anywhere. You can print that wherever you want to. I'm here and I'm a Spur for life](./printf)
-* a function that produces output according to a format.
+* Write a function that produces output according to a format.
 
 ### [1. Education is when you read the fine print. Experience is what you get if you don't](./printf)
 * Handle the following conversion specifiers:
 * d
 * i
 
-### [2. Just because it's in print doesn't mean it's the gospel](./print)
+### [2. Just because it's in print doesn't mean it's the gospel](./printf)
 * Create a man page for your function.
 
-### [3. With a face like mine, I do better in print](./print)
+### [3. With a face like mine, I do better in print](./printf)
 * Handle the following custom conversion specifiers:
 * b: the unsigned int argument is converted to binary
+
+### [4. What one has not experienced, one will never understand in print](./printf)
+* Handle the following conversion specifiers:
+* u
+* o
+* x
+* X
+
 
 ## Author
 * **Ryuichi Miyazaki** - [rmiyazaki6499](https://github.com/rmiyazaki6499)
