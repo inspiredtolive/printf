@@ -1,4 +1,3 @@
-#include <stddef.h>
 #include "holberton.h"
 
 /**
@@ -13,6 +12,7 @@ int _printf(char *format, ...)
 
 	print_fn getfn[] = {
 		{"%c", print_char},
+		{"%s", print_string},
 		{NULL, NULL}
 	};
 
@@ -21,11 +21,16 @@ int _printf(char *format, ...)
 	{
 		if (format[0] == '%')
 		{
+			/*
+			 * fn_p = getfn(fmt[1])
+			 * if (fn_p !== NULL)
+			 * fn_p()
+			 */
 			for (i = 0; getfn[i].specifier; i++)
 			{
 				if (format[1] == getfn[i].specifier[1])
 				{
-					written += getfn[i].f(getfn[i].specifier, args);
+					written += getfn[i].fn(getfn[i].specifier, args);
 					format += 2;
 				}
 			}
