@@ -9,7 +9,7 @@
 int print_binary(char *format, va_list args)
 {
 	unsigned int num = va_arg(args, unsigned int);
-	int binary[32], i, count;
+	int binary[32], i, count = 0;
 	(void)format;
 
 	for (i = 31; i >= 0; i--)
