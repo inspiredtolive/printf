@@ -15,6 +15,7 @@ int _printf(char *format, ...)
 		{"%s", print_string},
 		{"%d", print_num},
 		{"%i", print_num},
+		{"%r", print_rev},
 		{NULL, NULL}
 	};
 
