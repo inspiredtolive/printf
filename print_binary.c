@@ -9,19 +9,23 @@
 int print_binary(char *format, va_list args)
 {
 	unsigned int num = va_arg(args, unsigned int);
-	int binary[32], i, count = 0;
+	char *binary;
+	int i, size = sizeof(int) * 8, count = 0;
 	(void)format;
 
-	for (i = 31; i >= 0; i--)
+	binary = malloc(size);
+	if (!binary)
+		return (-1);
+	for (i = size - 1; i >= 0; i--)
 	{
-		binary[i] = num % 2;
+		binary[i] = num % 2 + '0';
 		num /= 2;
 	}
-	for (i = 0; i < 32 && binary[i] == 0; i++)
+	for (i = 0; i < size && binary[i] == '0'; i++)
 		;
-	for (; i < 32; i++)
+	for (; i < size; i++)
 	{
-		_putchar(binary[i] + '0');
+		_putchar(binary[i]);
 		count++;
 	}
 	return (count);
