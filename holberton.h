@@ -21,6 +21,8 @@ int _putchar(char c);
 int print_char(char *format, va_list);
 int _puts(char *str);
 int print_string(char *format, va_list);
+int _print_number(int n);
+int print_num(char *format, va_list args);
 int _printf(char *format, ...);
 
 #endif
