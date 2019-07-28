@@ -5,7 +5,7 @@
 #include <stddef.h>
 
 /**
- * struct print_fn - structure containing specifier 
+ * struct print_fn - structure containing specifier
  * and corresponding print functions.
  * @specifier: the location and method to translate data to characters.
  * @fn: print function for specific type.
@@ -21,6 +21,7 @@ int _putchar(char c);
 int print_char(char *format, va_list);
 int _puts(char *str);
 int print_string(char *format, va_list);
+int print_binary(char *format, va_list args);
 int _printf(char *format, ...);
 
 #endif
