@@ -12,7 +12,7 @@ int _printf(char *format, ...)
 
 	if (!format)
 		return (-1);
-	
+
 	print_fn getfn[] = {
 		{"%c", print_char},
 		{"%s", print_string},
