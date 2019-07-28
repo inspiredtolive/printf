@@ -10,9 +10,6 @@ int _printf(char *format, ...)
 	int i, written = 0;
 	va_list args;
 
-	if (!format)
-		return (-1);
-
 	print_fn getfn[] = {
 		{"%c", print_char},
 		{"%s", print_string},
@@ -25,6 +22,8 @@ int _printf(char *format, ...)
 		{NULL, NULL}
 	};
 
+	if (format == NULL)
+		return (-1);
 	va_start(args, format);
 	while (format[0])
 	{
