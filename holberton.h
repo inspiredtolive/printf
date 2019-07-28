@@ -3,9 +3,10 @@
 
 #include <stdarg.h>
 #include <stddef.h>
+#include <stdlib.h>
 
 /**
- * struct print_fn - structure containing specifier 
+ * struct print_fn - structure containing specifier
  * and corresponding print functions.
  * @specifier: the location and method to translate data to characters.
  * @fn: print function for specific type.
@@ -23,6 +24,7 @@ int _puts(char *str);
 int print_string(char *format, va_list);
 int _print_number(int n);
 int print_num(char *format, va_list args);
+int print_binary(char *format, va_list args);
 int _print_rev(char *s);
 int print_rev(char *format, va_list args);	
 

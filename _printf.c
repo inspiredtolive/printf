@@ -13,8 +13,9 @@ int _printf(char *format, ...)
 	print_fn getfn[] = {
 		{"%c", print_char},
 		{"%s", print_string},
-		{"%d", print_num},
+    {"%d", print_num},
 		{"%i", print_num},
+		{"%b", print_binary},
 		{"%r", print_rev},
 		{NULL, NULL}
 	};
