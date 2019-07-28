@@ -8,7 +8,7 @@
 
 int _print_hex(unsigned int number)
 {
-	int i, j, count, remainder;
+	int i, j, remainder, count = 0;
 	unsigned int num_copy;
 	num_copy = number;
 	while (num_copy != 0)
