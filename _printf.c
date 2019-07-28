@@ -16,7 +16,7 @@ int _printf(char *format, ...)
 		{"%d", print_num},
 		{"%i", print_num},
 		{"%r", print_rev},
-    {NULL, NULL}
+		{NULL, NULL}
 	};
 
 	va_start(args, format);
