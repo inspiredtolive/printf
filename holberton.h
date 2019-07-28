@@ -22,6 +22,10 @@ int print_char(char *format, va_list);
 int _puts(char *str);
 int print_string(char *format, va_list);
 
+int _print_hex(int number);
+int print_hex(char *format, va_list args);
+int _print_heX(unsigned int number);
+int print_heX(char *format, va_list args);
 int _print_rev(char *s);
 int print_rev(char *format, va_list args);	
 

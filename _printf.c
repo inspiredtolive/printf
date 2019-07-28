@@ -15,6 +15,8 @@ int _printf(char *format, ...)
 		{"%s", print_string},
 
 
+		{"%x", print_hex},
+		{"%X", print_heX},
 		{"%r", print_rev},
 		{NULL, NULL}
 	};
