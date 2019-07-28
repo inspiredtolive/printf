@@ -21,6 +21,7 @@ typedef struct
 int _putchar(char c);
 int print_char(char *format, va_list);
 int _puts(char *str);
+int print_percent(char *format, va_list);
 int print_string(char *format, va_list);
 int _print_number(int n);
 int print_num(char *format, va_list args);
