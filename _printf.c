@@ -13,10 +13,12 @@ int _printf(char *format, ...)
 	print_fn getfn[] = {
 		{"%c", print_char},
 		{"%s", print_string},
-
-
-		{"%x", print_hex},
-		{"%X", print_heX},
+		{"%d", print_num},
+		{"%i", print_num},
+		{"%b", print_binary},
+		{"%u", print_unsigned},
+    {"%x", print_hex},
+    {"%X", print_heX},
 		{"%r", print_rev},
 		{NULL, NULL}
 	};
