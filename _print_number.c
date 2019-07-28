@@ -3,6 +3,7 @@
 /**
  * _print_number - a function that prints an integer.
  * @n: input integer
+ * Return: digit count
  */
 
 int _print_number(int n)
