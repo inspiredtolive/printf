@@ -17,7 +17,7 @@ int _printf(char *format, ...)
 		{"%d", print_num},
 		{"%i", print_num},
 		{"%b", print_binary},
-		{"%u", print_unsigned},
+		{"%u", print_unsign},
 		{"%r", print_rev},
 		{NULL, NULL}
 	};
