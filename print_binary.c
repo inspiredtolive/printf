@@ -30,5 +30,6 @@ int print_binary(char *format, va_list args)
 		_putchar(binary[i]);
 		count++;
 	}
+	free(binary);
 	return (count);
 }
