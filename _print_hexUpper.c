@@ -1,10 +1,10 @@
 #include "holberton.h"
 
 /**
- *  * _print_hexUpper - a function that prints a hexadecimal number
- *   * @number: input number
- *    * Return: length of hexadecimal number
- *     */
+ * _print_hexUpper - a function that prints a hexadecimal number
+ * @number: input number
+ * Return: length of hexadecimal number
+ */
 
 int _print_hexUpper(unsigned int number)
 {
