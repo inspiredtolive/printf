@@ -34,7 +34,7 @@ int _count_digits(int n)
 		num_copy = num_copy / 10;
 		count++;
 	}
-	if (n < 0)
+	if (n <= 0)
 		count += 1;
 
 	return (count);
