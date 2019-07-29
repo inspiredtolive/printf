@@ -17,7 +17,9 @@ typedef struct print_method
 	int (*fn)(char *format, va_list);
 } print_fn;
 
+int _abs(int n);
 int _putchar(char c);
+int _count_digits(int n);
 int print_char(char *format, va_list);
 int _puts(char *str);
 int print_percent(char *format, va_list);
