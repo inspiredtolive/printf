@@ -39,5 +39,6 @@ int _print_hexlower(unsigned int number)
 	for (j = i - 1; j >= 0; j--)
 		_putchar(hexadecimal[j]);
 
+	free(hexadecimal);
 	return (count);
 }
