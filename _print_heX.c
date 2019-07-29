@@ -26,12 +26,10 @@ int _print_heX(unsigned int number)
 		if (remainder < 10)
 		{
 			hexArray[i] = remainder + '0';
-			i++;
 		}
 		else
 		{
 			hexArray[i] = remainder + '7';
-			i++;
 		}
 		number /= 16;
 	}
