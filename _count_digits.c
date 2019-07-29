@@ -1,3 +1,4 @@
+
 #include "holberton.h"
 
 /**
@@ -29,13 +30,16 @@ int _count_digits(int n)
 	int count = 0;
 	int num_copy = n;
 
+	if (n <= 0)
+		count += 1;
+	else if (n == 0)
+		count = 0;
+
 	while (_abs(num_copy) != 0)
 	{
 		num_copy = num_copy / 10;
 		count++;
 	}
-	if (n < 0)
-		count += 1;
 
 	return (count);
 }
