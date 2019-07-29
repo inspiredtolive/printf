@@ -32,6 +32,7 @@ int print_unsign(char *format, va_list args);
 int _print_rev(char *s);
 int print_rev(char *format, va_list args);
 
+int is_valid_format(char *format);
 int _printf(char *format, ...);
 
 #endif

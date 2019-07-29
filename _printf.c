@@ -22,7 +22,7 @@ int _printf(char *format, ...)
 		{NULL, NULL}
 	};
 
-	if (format == NULL)
+	if (!is_valid_format(format))
 		return (-1);
 	va_start(args, format);
 	while (format[0])
