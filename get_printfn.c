@@ -18,8 +18,8 @@ int (*get_print_fn(char *format))(char *format, va_list)
 		{"%b", print_binary},
 		{"%u", print_unsign},
 		{"%o", print_octal},
-		{"%x", print_hex},
-		{"%X", print_heX},
+		{"%x", print_hexlower},
+		{"%X", print_hexUpper},
 		{"%S", print_unprintable},
 		{"%r", print_rev},
 		{NULL, NULL}
