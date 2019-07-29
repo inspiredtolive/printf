@@ -13,6 +13,8 @@ int print_binary(char *format, va_list args)
 	int i, size = sizeof(int) * 8, count = 0;
 	(void)format;
 
+	if (num == 0)
+		return (_putchar('0'));
 	binary = malloc(size);
 	if (!binary)
 		return (-1);
