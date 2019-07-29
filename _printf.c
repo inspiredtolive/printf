@@ -21,9 +21,12 @@ int _printf(char *format, ...)
 		if (format[0] == '%')
 		{
 			print_fn = get_print_fn(format);
-			specifier[0] = '%';
-			specifier[1] = format[1];
-			written += print_fn(specifier, args);
+			if (print_fn)
+			{
+				specifier[0] = '%';
+				specifier[1] = format[1];
+				written += print_fn(specifier, args);
+			}
 			format += 2;
 		}
 		else
