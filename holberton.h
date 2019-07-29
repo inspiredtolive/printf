@@ -29,6 +29,7 @@ int print_num(char *format, va_list args);
 int print_binary(char *format, va_list args);
 int _print_unsign(unsigned int n);
 int print_unsign(char *format, va_list args);
+int print_unprintable(char *format, va_list args);
 int _print_rev(char *s);
 int print_rev(char *format, va_list args);
 
