@@ -35,6 +35,7 @@ int _printf(char *format, ...)
 				{
 					written += getfn[i].fn(getfn[i].specifier, args);
 					format += 2;
+					break;
 				}
 			}
 		}
