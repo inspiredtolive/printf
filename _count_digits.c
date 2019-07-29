@@ -31,8 +31,6 @@ int _count_digits(int n)
 
 	if (n <= 0)
 		count += 1;
-	else if (n == 0)
-		count = 0;
 
 	while (_abs(num_copy) != 0)
 	{

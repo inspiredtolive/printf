@@ -12,7 +12,7 @@ int _print_unsign(unsigned int n)
 	unsigned int num_copy = n;
 
 	if (n == 0)
-		count = 0;
+		count = 1;
 
 	while (_abs(num_copy) != 0)
 	{
