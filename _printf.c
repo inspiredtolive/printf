@@ -7,39 +7,24 @@
  */
 int _printf(char *format, ...)
 {
-	int i, written = 0;
+	int written = 0;
+	int (*print_fn)(char *, va_list);
+	char specifier[3];
 	va_list args;
-
-	print_fn getfn[] = {
-		{"%c", print_char},
-		{"%s", print_string},
-		{"%%", print_percent},
-		{"%d", print_num},
-		{"%i", print_num},
-		{"%b", print_binary},
-		{"%u", print_unsign},
-		{"%o", print_octal},
-		{"%S", print_unprintable},
-		{"%r", print_rev},
-		{NULL, NULL}
-	};
 
 	if (!is_valid_format(format))
 		return (-1);
+	specifier[2] = '\0';
 	va_start(args, format);
 	while (format[0])
 	{
 		if (format[0] == '%')
 		{
-			for (i = 0; getfn[i].specifier; i++)
-			{
-				if (format[1] == getfn[i].specifier[1])
-				{
-					written += getfn[i].fn(getfn[i].specifier, args);
-					format += 2;
-					break;
-				}
-			}
+			print_fn = get_print_fn(format);
+			specifier[0] = '%';
+			specifier[1] = format[1];
+			written += print_fn(specifier, args);
+			format += 2;
 		}
 		else
 		{
