@@ -4,15 +4,16 @@ _printf - format and print data
 .SH SYNOPSIS
 .B printf FORMAT [ARGUMENT]...
 .SH DESCRIPTION
-Prints [ARGUMENT] based on FORMAT
+Prints ARGUMENT(s) based on FORMAT
 
-Based on the conversion specifier, _printf will print the argument.
+If format includes format specifiers (subsequences beginning with %), the additional arguments following format are formatted and inserted in the resulting string replacing their respective specifiers.
+
 _printf will also take an indefinite amount of arguements.
 
 Example:
-printf("%d", num);
+printf("%d", number);
 
-In this example, num will be printed in place of %d in the string of the first parameter. 
+In this example, number will be printed in place of %d in the string of the first parameter. 
 
 .B The conversion specifiers
 
@@ -46,7 +47,7 @@ In this example, num will be printed in place of %d in the string of the first p
 - prints a rot13'ed string
 
 .SH OPTIONS
-.B printf
+.B 
 
 .SH SEE ALSO
 .I printf (3)
