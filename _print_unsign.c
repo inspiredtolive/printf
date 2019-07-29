@@ -8,12 +8,13 @@
 
 int _print_unsign(unsigned int n)
 {
-	int count = 0;
+	int count;
+
+	count = _count_digits(n);
 
 	if (n >= 10)
 		_print_unsign(n / 10);
 	_putchar (n % 10 + '0');
-	count++;
 
 	return (count);
 }
