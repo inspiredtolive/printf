@@ -27,6 +27,8 @@ int (*get_print_fn(char *format))(char *format, va_list)
 
 	for (i = 0; getfn[i].specifier; i++)
 	{
+		if (format[1] == ' ')
+			return (NULL);
 		if (format[1] == getfn[i].specifier[1])
 			return (getfn[i].fn);
 	}
