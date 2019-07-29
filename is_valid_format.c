@@ -7,7 +7,7 @@ int is_valid_format(char *format)
 {
 	int i, isValid;
 
-	char *valid_chars = "cs%dibuoSr";
+	char *valid_chars = "cs%dibuoxXSr";
 
 	if (!format)
 		return (0);
