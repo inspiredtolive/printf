@@ -27,6 +27,7 @@ int print_string(char *format, va_list);
 int _print_number(int n);
 int print_num(char *format, va_list args);
 int print_binary(char *format, va_list args);
+int print_octal(char *format, va_list args);
 int _print_unsign(unsigned int n);
 int print_unsign(char *format, va_list args);
 int print_unprintable(char *format, va_list args);

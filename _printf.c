@@ -18,8 +18,9 @@ int _printf(char *format, ...)
 		{"%i", print_num},
 		{"%b", print_binary},
 		{"%u", print_unsign},
-		{"%S", print_unprintable},
-		{"%r", print_rev},
+		{"%o", print_octal},
+    {"%S", print_unprintable},
+    {"%r", print_rev},
 		{NULL, NULL}
 	};
 
@@ -36,6 +37,7 @@ int _printf(char *format, ...)
 				{
 					written += getfn[i].fn(getfn[i].specifier, args);
 					format += 2;
+					break;
 				}
 			}
 		}
