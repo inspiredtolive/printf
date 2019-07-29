@@ -1,16 +1,54 @@
-.TH man 2 "04 May 2015" "0.32" "holberton man page"
+.TH _PRINTF "1" "31 July 2019" "0x11" "_printf man page"
 .SH NAME
-.B printf
+_printf - format and print data
 .SH SYNOPSIS
-holberton [STUDENTNAME]
+.B printf FORMAT [ARGUMENT]...
 .SH DESCRIPTION
-Holberton School is a project-based alternative to college for the next generation of software engineers.
+Prints [ARGUMENT] based on FORMAT
+
+Based on the conversion specifier, _printf will print the argument.
+_printf will also take an indefinite amount of arguements.
+
+Example:
+printf("%d", num);
+
+In this example, num will be printed in place of %d in the string of the first parameter. 
+
+.B The conversion specifiers
+
+.IP %c 
+- prints a character
+.IP %s 
+- prints a string
+.IP %%
+- prints a percentage symbol
+.IP %d
+- prints a decimal
+.IP %i
+- prints an integer
+.IP %b
+- prints a binary number
+.IP %u
+- prints an unsigned decimal
+.IP %o
+- prints an octal decimal
+.IP %x
+- prints a hexadecimal (lowercase)
+.IP %X
+- prints a hexadecimal (uppercase)
+.IP %S
+- prints the string where non-printable characters are replaced with a \\ then an x
+.IP %p
+- prints a pointer value
+.IP %r
+- prints the reverse of a string
+.IP %R
+- prints a rot13'ed string
+
 .SH OPTIONS
 .B printf
 
 .SH SEE ALSO
 .I printf (3)
-.SH BUGS
-No known bugs.
 .SH AUTHOR
 Marco Chan and Ryuichi Miyazaki
