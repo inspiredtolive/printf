@@ -6,13 +6,12 @@
 #include <stdlib.h>
 
 /**
- * struct print_fn - structure containing specifier
+ * struct print_method - structure containing specifier
  * and corresponding print functions.
  * @specifier: the location and method to translate data to characters.
  * @fn: print function for specific type.
  */
-
-typedef struct
+typedef struct print_method
 {
 	char *specifier;
 	int (*fn)(char *format, va_list);
@@ -29,7 +28,7 @@ int print_binary(char *format, va_list args);
 int _print_unsign(unsigned int n);
 int print_unsign(char *format, va_list args);
 int _print_rev(char *s);
-int print_rev(char *format, va_list args);	
+int print_rev(char *format, va_list args);
 
 int _printf(char *format, ...);
 
