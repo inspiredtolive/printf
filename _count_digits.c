@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2333fe0ea0837678ab7a60262de9a739337e966f
 #include "holberton.h"
 
 /**
