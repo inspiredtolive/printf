@@ -12,6 +12,8 @@ int _printf(char *format, ...)
 	char specifier[3];
 	va_list args;
 
+	if (format == NULL)
+		return (-1);
 	specifier[2] = '\0';
 	va_start(args, format);
 	while (format[0])
