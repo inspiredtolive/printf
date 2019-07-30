@@ -33,7 +33,10 @@ int print_hexUpper(char *format, va_list args);
 int _print_unsign(unsigned int n);
 int print_unsign(char *format, va_list);
 int print_unprintable(char *format, va_list);
+int print_pointer(char *format, va_list);
 int print_rev(char *format, va_list);
+int _print_rot13(char *s);
+int print_rot13(char *format, va_list args);
 
 int is_valid_format(char *format);
 int (*get_print_fn(char *format))(char *format, va_list);

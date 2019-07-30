@@ -16,6 +16,8 @@ int _printf(char *format, ...)
 		return (-1);
 	specifier[2] = '\0';
 	va_start(args, format);
+	/* initialize the buffer */
+	_putchar(-1);
 	while (format[0])
 	{
 		if (format[0] == '%')
@@ -46,5 +48,7 @@ int _printf(char *format, ...)
 			format++;
 		}
 	}
+	/* print the rest of the buffer */
+	_putchar(-2);
 	return (written);
 }
