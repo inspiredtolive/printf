@@ -25,6 +25,8 @@ int print_rot13(char *format, va_list args)
 				break;
 			}
 		}
+		if (input[char_i] == '\0')
+			_putchar(string[i]);
 		count++;
 	}
 	return (count);
