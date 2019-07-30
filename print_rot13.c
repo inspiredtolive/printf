@@ -9,9 +9,23 @@
 int print_rot13(char *format, va_list args)
 {
 	char *string = va_arg(args, char *);
-	int count;
+	int i, count = 0;
+	int char_i;
+	char input[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char output[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 	(void)format;
-
-	count = _print_rot13(string);
+	
+	for (i = 0; string[i] != '\0'; i++)
+	{
+		for (char_i = 0; input[char_i] != '\0'; char_i++)
+		{
+			if (string[i] == input[char_i])
+			{
+				_putchar(output[char_i]);
+				break;
+			}
+		}
+		count++;
+	}
 	return (count);
 }
