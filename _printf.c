@@ -27,10 +27,12 @@ int _printf(char *format, ...)
 			}
 			else if (format[1] != '\0')
 			{
+				written += _putchar('%');
 				written += _putchar(format[1]);
 			}
 			else
 			{
+				written += _putchar('%');
 				return (written);
 			}
 			format += 2;
