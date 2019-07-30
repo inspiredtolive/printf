@@ -21,6 +21,7 @@ int (*get_print_fn(char *format))(char *format, va_list)
 		{"%x", print_hexlower},
 		{"%X", print_hexUpper},
 		{"%S", print_unprintable},
+		{"%p", print_pointer},
 		{"%r", print_rev},
 		{"%R", print_rot13},
 		{NULL, NULL}
