@@ -25,17 +25,14 @@ int _puts(char *str);
 int print_percent(char *format, va_list);
 int print_string(char *format, va_list);
 int _print_number(int n);
-int print_num(char *format, va_list);
+int print_number(char *format, va_list);
 int print_binary(char *format, va_list);
 int print_octal(char *format, va_list);
-int _print_hexlower(unsigned int number);
 int print_hexlower(char *format, va_list args);
-int _print_hexUpper(unsigned int number);
 int print_hexUpper(char *format, va_list args);
 int _print_unsign(unsigned int n);
 int print_unsign(char *format, va_list);
 int print_unprintable(char *format, va_list);
-int _print_rev(char *s);
 int print_rev(char *format, va_list);
 
 int is_valid_format(char *format);
