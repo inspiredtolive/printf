@@ -14,13 +14,13 @@ int print_pointer(char *format, va_list args)
 	char *digits = "0123456789abcdef";
 	(void)format;
 
-	written += _puts("0x");
 	if (pointer == NULL)
 	{
-		written += _putchar('0');
+		written += _puts("(nil)");
 		return (written);
 	}
 	byte = (unsigned char *)&pointer;
+	written += _puts("0x");
 	/* loops through each byte of a pointer*/
 	for (i = size - 1; i >= 0; i--)
 	{
