@@ -25,10 +25,10 @@ int (*get_print_fn(char *format))(char *format, va_list)
 		{NULL, NULL}
 	};
 
+	if (format[1] == ' ' || format[1] == '\0')
+		return (NULL);
 	for (i = 0; getfn[i].specifier; i++)
 	{
-		if (format[1] == ' ')
-			return (NULL);
 		if (format[1] == getfn[i].specifier[1])
 			return (getfn[i].fn);
 	}
