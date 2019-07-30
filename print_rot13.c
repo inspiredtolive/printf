@@ -14,7 +14,7 @@ int print_rot13(char *format, va_list args)
 	char input[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char output[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 	(void)format;
-	
+
 	for (i = 0; string[i] != '\0'; i++)
 	{
 		for (char_i = 0; input[char_i] != '\0'; char_i++)
