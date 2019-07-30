@@ -25,7 +25,7 @@ int _putchar(char c)
 	{
 		buffer[bufferCount] = c;
 		bufferCount++;
-		return(1);
+		return (1);
 	}
 	return (write(1, &c, 1));
 }
