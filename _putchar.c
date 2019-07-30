@@ -19,7 +19,6 @@ int _putchar(char c)
 	{
 		write(1, buffer, bufferCount);
 		bufferCount = 0;
-		return (0);
 	}
 	if (c != -1 && c != -2)
 	{
@@ -27,5 +26,5 @@ int _putchar(char c)
 		bufferCount++;
 		return (1);
 	}
-	return (write(1, &c, 1));
+	return (0);
 }
