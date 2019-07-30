@@ -7,8 +7,7 @@
  */
 int _printf(char *format, ...)
 {
-	int written = 0;
-	int (*print_fn)(char *, va_list);
+	int written = 0, (*print_fn)(char *, va_list);
 	char specifier[3];
 	va_list args;
 
@@ -16,7 +15,6 @@ int _printf(char *format, ...)
 		return (-1);
 	specifier[2] = '\0';
 	va_start(args, format);
-	/* initialize the buffer */
 	_putchar(-1);
 	while (format[0])
 	{
@@ -43,12 +41,10 @@ int _printf(char *format, ...)
 		}
 		else
 		{
-			_putchar(format[0]);
-			written += 1;
+			written += _putchar(format[0]);
 			format++;
 		}
 	}
-	/* print the rest of the buffer */
 	_putchar(-2);
 	return (written);
 }
