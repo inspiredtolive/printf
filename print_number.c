@@ -27,3 +27,19 @@ int _print_number(int n)
 
 	return (count);
 }
+
+/**
+ * print_number - prints a number
+ * @format: format to print number
+ * @args: va_list that contains the number to print
+ * Return: number of characters printed
+ */
+int print_number(char *format, va_list args)
+{
+	int num = va_arg(args, int);
+	int count;
+	(void)format;
+
+	count = _print_number(num);
+	return (count);
+}

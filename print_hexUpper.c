@@ -9,9 +9,36 @@
 int print_hexUpper(char *format, va_list args)
 {
 	unsigned int number = va_arg(args, unsigned int);
-	int count;
+	int i, j, remainder, count = 0;
+	unsigned int number_copy = number;
+	char *hexadecimal;
 	(void)format;
 
-	count = _print_hexUpper(number);
+	if (number == 0)
+		return (_putchar('0'));
+	while (number_copy != 0)
+	{
+		number_copy /= 16;
+		count++;
+	}
+	hexadecimal = malloc(count);
+	for (i = 0; number != 0; i++)
+	{
+		remainder = 0;
+		remainder = number % 16;
+		if (remainder < 10)
+		{
+			hexadecimal[i] = remainder + '0';
+		}
+		else
+		{
+			hexadecimal[i] = remainder + '7';
+		}
+		number /= 16;
+	}
+	for (j = i - 1; j >= 0; j--)
+		_putchar(hexadecimal[j]);
+
+	free(hexadecimal);
 	return (count);
 }
