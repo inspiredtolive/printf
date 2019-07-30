@@ -5,38 +5,31 @@
  * @n: input number
  * Return: A positive value
  */
-
-int _abs(int n)
+int _abs(int number)
 {
-	if (n < 0)
-	{
-		return (-1 * n);
-	}
+	if (number < 0)
+		return (-1 * number);
 	else
-	{
-		return (n);
-	}
+		return (number);
 }
 
 /**
- * _count_digits - a function that counts the digits of a number.
+ * count_digits - a function that counts the digits of a number.
  * @n: input integer
  * Return: digit count
  */
-
-int _count_digits(int n)
+int count_digits(int number)
 {
 	int count = 0;
-	int num_copy = n;
+	int number_copy = number;
 
-	if (n <= 0)
+	if (number <= 0)
 		count += 1;
 
-	while (_abs(num_copy) != 0)
+	while (_abs(number_copy) != 0)
 	{
-		num_copy = num_copy / 10;
+		number_copy = number_copy / 10;
 		count++;
 	}
-
 	return (count);
 }
