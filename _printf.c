@@ -12,8 +12,6 @@ int _printf(char *format, ...)
 	char specifier[3];
 	va_list args;
 
-	if (!is_valid_format(format))
-		return (-1);
 	specifier[2] = '\0';
 	va_start(args, format);
 	while (format[0])
@@ -26,6 +24,14 @@ int _printf(char *format, ...)
 				specifier[0] = '%';
 				specifier[1] = format[1];
 				written += print_fn(specifier, args);
+			}
+			else if (format[1] != '\0')
+			{
+				written += _putchar(format[1]);
+			}
+			else
+			{
+				return (written);
 			}
 			format += 2;
 		}
