@@ -8,7 +8,7 @@
  */
 int print_unprintable(char *format, va_list args)
 {
-	char *string = va_arg(args, char *), hex[3];
+	char *string = va_arg(args, char *), hex[3], digit;
 	int count = 0;
 	(void)format;
 
@@ -20,14 +20,17 @@ int print_unprintable(char *format, va_list args)
 		if (*string < 32 || *string >= 127)
 		{
 			count += _puts("\\x");
-			if (*string % 16 >= 10)
-				hex[1] = *string % 16 + 55;
+			digit = *string % 16;
+			if (digit >= 10)
+				hex[1] = digit - 10 + 'A';
 			else
-				hex[1] = *string % 16 + '0';
-			if (*string / 16 % 16 >= 10)
-				hex[0] = *string / 16 % 16 + 55;
+				hex[1] = digit + '0';
+
+			digit = *string / 16 % 16;
+			if (digit >= 10)
+				hex[0] = digit - 10 + 'A';
 			else
-				hex[0] = *string / 16 % 16 + '0';
+				hex[0] = digit + '0';
 			count += _puts(hex);
 		}
 		else

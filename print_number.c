@@ -2,28 +2,26 @@
 
 /**
  * _print_number - a function that prints an integer.
- * @n: input integer
+ * @number: input integer
  * Return: digit count
  */
-
-int _print_number(int n)
+int _print_number(int number)
 {
-	unsigned int m;
+	unsigned int unsign;
 	int count;
 
-	count = _count_digits(n);
-
-	if (n < 0)
+	count = count_digits(number);
+	if (number < 0)
 	{
 		_putchar('-');
-		m = -n;
+		unsign = -number;
 	}
 	else
-		m = n;
+		unsign = number;
 
-	if (m >= 10)
-		_print_number(m / 10);
-	_putchar(m % 10 + '0');
+	if (unsign >= 10)
+		_print_number(unsign / 10);
+	_putchar(unsign % 10 + '0');
 
 	return (count);
 }
@@ -36,10 +34,11 @@ int _print_number(int n)
  */
 int print_number(char *format, va_list args)
 {
-	int num = va_arg(args, int);
+	int number = va_arg(args, int);
 	int count;
 	(void)format;
 
-	count = _print_number(num);
+	count = _print_number(number);
+
 	return (count);
 }

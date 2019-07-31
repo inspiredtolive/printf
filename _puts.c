@@ -3,20 +3,18 @@
 /**
  * _puts - a function that prints a string
  * followed by a new line, to stdout.
- * @str: input string
+ * @string: input string
  * Return: character count of string.
  */
-
-
-int _puts(char *str)
+int _puts(char *string)
 {
 	int count = 0;
 
-	while (*str)
+	while (*string)
 	{
-		_putchar(*str);
-			str++;
-			count++;
+		_putchar(*string);
+		string++;
+		count++;
 	}
 	return (count);
 }

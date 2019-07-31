@@ -35,7 +35,7 @@ int _printf(char *format, ...)
 			else
 			{
 				written += _putchar('%');
-				return (written);
+				break;
 			}
 			format += 2;
 		}

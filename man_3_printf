@@ -38,16 +38,13 @@ In this example, the value of [number] will be printed in place of %d in the str
 .IP %X
 - prints a hexadecimal (uppercase)
 .IP %S
-- prints the string where non-printable characters are replaced with a \\ then an x
+- prints a string where non-printable characters are replaced with a \\x followed by the ASCII code value in hexadecimal
 .IP %p
 - prints a pointer value
 .IP %r
 - prints the reverse of a string
 .IP %R
 - prints a rot13'ed string
-
-.SH OPTIONS
-.B
 
 .SH SEE ALSO
 .I printf (3)

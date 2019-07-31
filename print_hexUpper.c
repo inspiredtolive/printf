@@ -24,21 +24,15 @@ int print_hexUpper(char *format, va_list args)
 	hexadecimal = malloc(count);
 	for (i = 0; number != 0; i++)
 	{
-		remainder = 0;
 		remainder = number % 16;
 		if (remainder < 10)
-		{
 			hexadecimal[i] = remainder + '0';
-		}
 		else
-		{
-			hexadecimal[i] = remainder + '7';
-		}
+			hexadecimal[i] = remainder - 10 + 'A';
 		number /= 16;
 	}
 	for (j = i - 1; j >= 0; j--)
 		_putchar(hexadecimal[j]);
-
 	free(hexadecimal);
 	return (count);
 }

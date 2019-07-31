@@ -16,31 +16,23 @@ int print_hexlower(char *format, va_list args)
 
 	if (number == 0)
 		return (_putchar('0'));
-
 	while (number_copy != 0)
 	{
 		number_copy /= 16;
 		count++;
 	}
 	hexadecimal = malloc(count);
-
 	for (i = 0; number != 0; i++)
 	{
-		remainder = 0;
 		remainder = number % 16;
 		if (remainder < 10)
-		{
 			hexadecimal[i] = remainder + '0';
-		}
 		else
-		{
-			hexadecimal[i] = remainder + 'W';
-		}
+			hexadecimal[i] = remainder - 10  + 'a';
 		number /= 16;
 	}
 	for (j = i - 1; j >= 0; j--)
 		_putchar(hexadecimal[j]);
-
 	free(hexadecimal);
 	return (count);
 }
