@@ -22,6 +22,8 @@ int print_hexUpper(char *format, va_list args)
 		count++;
 	}
 	hexadecimal = malloc(count);
+	if (!hexadecimal)
+		return (-1);
 	for (i = 0; number != 0; i++)
 	{
 		remainder = number % 16;
