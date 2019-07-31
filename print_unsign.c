@@ -2,27 +2,26 @@
 
 /**
  * _print_unsign - a function that prints an integer.
- * @n: input integer
+ * @number: input integer
  * Return: digit count
  */
-
-int _print_unsign(unsigned int n)
+int _print_unsign(unsigned int number)
 {
 	int count = 0;
-	unsigned int num_copy = n;
+	unsigned int number_copy = number;
 
-	if (n == 0)
+	if (number == 0)
 		count = 1;
 
-	while (_abs(num_copy) != 0)
+	while (_abs(number_copy) != 0)
 	{
-		num_copy = num_copy / 10;
+		number_copy = number_copy / 10;
 		count++;
 	}
 
-	if (n >= 10)
-		_print_unsign(n / 10);
-	_putchar (n % 10 + '0');
+	if (number >= 10)
+		_print_unsign(number / 10);
+	_putchar (number % 10 + '0');
 
 	return (count);
 }
@@ -35,10 +34,10 @@ int _print_unsign(unsigned int n)
  */
 int print_unsign(char *format, va_list args)
 {
-	unsigned int num = va_arg(args, int);
+	unsigned int number = va_arg(args, int);
 	int count;
 	(void)format;
 
-	count = _print_unsign(num);
+	count = _print_unsign(number);
 	return (count);
 }

@@ -3,7 +3,7 @@
 /**
  * _puts - a function that prints a string
  * followed by a new line, to stdout.
- * @str: input string
+ * @string: input string
  * Return: character count of string.
  */
 int _puts(char *string)

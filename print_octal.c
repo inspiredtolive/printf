@@ -8,26 +8,26 @@
  */
 int print_octal(char *format, va_list args)
 {
-	unsigned int num = va_arg(args, unsigned int);
-	unsigned int num_cpy = num;
+	unsigned int number = va_arg(args, unsigned int);
+	unsigned int number_cpy = number;
 	char *octal;
 	int i, size = 0, count = 0;
 	(void)format;
 
-	if (num == 0)
+	if (number == 0)
 		return (_putchar('0'));
-	while (num_cpy != 0)
+	while (number_cpy != 0)
 	{
 		size++;
-		num_cpy /= 8;
+		number_cpy /= 8;
 	}
 	octal = malloc(size);
 	if (!octal)
 		return (-1);
 	for (i = size - 1; i >= 0; i--)
 	{
-		octal[i] = num % 8 + '0';
-		num /= 8;
+		octal[i] = number % 8 + '0';
+		number /= 8;
 	}
 	for (i = 0; i < size && octal[i] == '0'; i++)
 		;

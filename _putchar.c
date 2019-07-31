@@ -2,7 +2,7 @@
 
 /**
  * _putchar - writes a char to stdout
- * @c: character to print
+ * @character: character to print
  * Return: Success(1), Error(1) sets errno
  */
 int _putchar(char character)

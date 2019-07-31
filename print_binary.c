@@ -8,20 +8,20 @@
  */
 int print_binary(char *format, va_list args)
 {
-	unsigned int num = va_arg(args, unsigned int);
+	unsigned int number = va_arg(args, unsigned int);
 	char *binary;
 	int i, size = sizeof(int) * 8, count = 0;
 	(void)format;
 
-	if (num == 0)
+	if (number == 0)
 		return (_putchar('0'));
 	binary = malloc(size);
 	if (!binary)
 		return (-1);
 	for (i = size - 1; i >= 0; i--)
 	{
-		binary[i] = num % 2 + '0';
-		num /= 2;
+		binary[i] = number % 2 + '0';
+		number /= 2;
 	}
 	for (i = 0; i < size && binary[i] == '0'; i++)
 		;

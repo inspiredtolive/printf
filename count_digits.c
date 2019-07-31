@@ -2,7 +2,7 @@
 
 /**
  * _abs - calculates the absolute value of a number
- * @n: input number
+ * @number: input number
  * Return: A positive value
  */
 int _abs(int number)
@@ -15,7 +15,7 @@ int _abs(int number)
 
 /**
  * count_digits - a function that counts the digits of a number.
- * @n: input integer
+ * @number: input integer
  * Return: digit count
  */
 int count_digits(int number)
