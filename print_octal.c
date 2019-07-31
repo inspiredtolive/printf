@@ -9,17 +9,17 @@
 int print_octal(char *format, va_list args)
 {
 	unsigned int number = va_arg(args, unsigned int);
-	unsigned int number_cpy = number;
+	unsigned int number_copy = number;
 	char *octal;
 	int i, size = 0, count = 0;
 	(void)format;
 
 	if (number == 0)
 		return (_putchar('0'));
-	while (number_cpy != 0)
+	while (number_copy != 0)
 	{
 		size++;
-		number_cpy /= 8;
+		number_copy /= 8;
 	}
 	octal = malloc(size);
 	if (!octal)
