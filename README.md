@@ -68,4 +68,4 @@ version specifier.
 * R: prints the rot13'ed string
 ## Author
 * **Ryuichi Miyazaki** - [rmiyazaki6499](https://github.com/rmiyazaki6499)
-* **Marco Chan** - [inspuredtolive] (https://github.com/inspiredtolive)
+* **Marco Chan** - [inspuredtolive](https://github.com/inspiredtolive)
